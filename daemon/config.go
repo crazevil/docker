@@ -13,12 +13,9 @@ const (
 	disableNetworkBridge = "none"
 )
 
-// TODO FIX THIS COMMENT
-// CommonConfig defines the configuration of a docker daemon.
-// These are the configuration settings that you pass
-// to the docker daemon when you launch it with say: `docker -d -e lxc`
+// CommonConfig defines the configuration of a docker daemon which is
+// common across platforms
 type CommonConfig struct {
-	// Cross-platform common configuration of a docker daemon
 	// FIXME: separate runtime configuration from http api configuration
 	AutoRestart    bool
 	Bridge         bridge.Config
