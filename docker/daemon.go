@@ -96,7 +96,7 @@ func mainDaemon() {
 		EnableCors:  daemonCfg.EnableCors,
 		CorsHeaders: daemonCfg.CorsHeaders,
 		Version:     dockerversion.VERSION,
-		SocketGroup: daemonCfg.PlatformSpecific.SocketGroup,
+		SocketGroup: daemonCfg.SocketGroup,
 		Tls:         *flTls,
 		TlsVerify:   *flTlsVerify,
 		TlsCa:       *flCa,

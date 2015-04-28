@@ -6,9 +6,14 @@ import (
 	flag "github.com/docker/docker/pkg/mflag"
 )
 
-// PlatformSpecific defines the configuration of a docker daemon
-// that is specific to a particular platform.
-type PlatformSpecific struct {
+// Config defines the configuration of a docker daemon.
+// These are the configuration settings that you pass
+// to the docker daemon when you launch it with say: `docker -d -e windows`
+type Config struct {
+	CommonConfig
+
+	// Fields below here are platform specific. (There are none presently
+	// for the Windows daemon.)
 }
 
 // InstallFlags adds command-line options to the top-level flag parser for
