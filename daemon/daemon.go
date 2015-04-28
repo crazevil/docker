@@ -839,7 +839,7 @@ func NewDaemonFromDirectory(config *Config, eng *engine.Engine, registryService 
 		}
 	})
 
-	if config.PlatformSpecific.EnableSelinuxSupport {
+	if config.EnableSelinuxSupport {
 		if selinuxEnabled() {
 			// As Docker on btrfs and SELinux are incompatible at present, error on both being enabled
 			if driver.String() == "btrfs" {

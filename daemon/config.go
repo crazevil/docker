@@ -13,10 +13,11 @@ const (
 	disableNetworkBridge = "none"
 )
 
-// Config defines the configuration of a docker daemon.
+// TODO FIX THIS COMMENT
+// CommonConfig defines the configuration of a docker daemon.
 // These are the configuration settings that you pass
 // to the docker daemon when you launch it with say: `docker -d -e lxc`
-type Config struct {
+type CommonConfig struct {
 	// Cross-platform common configuration of a docker daemon
 	// FIXME: separate runtime configuration from http api configuration
 	AutoRestart    bool
@@ -36,9 +37,6 @@ type Config struct {
 	Pidfile        string
 	Root           string
 	TrustKeyPath   string
-
-	// And any platform specific configuration
-	PlatformSpecific PlatformSpecific
 }
 
 // CommonInstallFlags adds command-line options to the top-level flag parser for
